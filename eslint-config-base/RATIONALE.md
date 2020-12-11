@@ -1,5 +1,7 @@
 # TMS Configs
 
+TMS configs extends [airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) for the basic javascript linter.
+
 ## Rules
 
 **`import/prefer-default-export`**
@@ -101,3 +103,40 @@
 | Airbnb | Ours | Proposed |
 |-|-|-|
 | `error`, with default config as eslintconfig has | `warn` | following airbnb |
+
+***
+
+# ESD Configs
+
+ESD configs extend eslint:recommended which we are not going to extend to, since we prefer airbnb.
+
+***
+
+# Internal Frontend
+
+TMS configs extend [airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) for the basic javascript linter.
+
+Most of rules on this project are similar to TMS.
+
+## Rules
+
+**`indent`**
+| Airbnb | Ours | Proposed |
+|-|-|-|
+| `error` for [some conditions](https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js#L130-L153) | `warn` | following airbnb |
+
+***
+
+# Shipper Frontend
+
+Shipper Frontend configs extend [airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) for the basic javascript linter.
+
+Most of rules on this project are similar to TMS.
+
+***
+
+# Commercial
+
+Commercial configs extend [airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) for the basic javascript linter.
+
+Most of rules on this project are similar to TMS.
