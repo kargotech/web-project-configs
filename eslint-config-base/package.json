@@ -1,0 +1,15 @@
+{
+  "name": "@kargotech/eslint-config-base",
+  "version": "0.1.0",
+  "description": "Sensible eslint configs for kargo.tech project development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Royyan Bachtiar <royyan@kargo.tech>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^14.2.1"
+  }
+}
