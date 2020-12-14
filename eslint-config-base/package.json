@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "description": "Sensible eslint configs for kargo.tech project development",
   "main": "index.js",
-  "repository": {
-    "type" : "git",
-    "url" : "https://github.com/kargotech/web-project-configs.git"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +15,14 @@
   "peerDependencies": {
     "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0",
     "eslint-plugin-import": "^2.22.1"
-  }
+  },
+  "homepage": "https://github.com/kargotech/web-project-configs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kargotech/web-project-configs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kargotech/web-project-configs/issues"
+  },
+  "devDependencies": {}
 }
