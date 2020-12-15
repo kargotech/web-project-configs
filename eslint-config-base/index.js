@@ -5,7 +5,8 @@ module.exports = {
   rules: {
     // Always better not not import extraneous dependencies
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
-    'import/no-extraneous-dependencies': ['error', {​​​​​​​
+    'import/no-extraneous-dependencies': ['error', {
+      optionalDependencies: false,
       devDependencies: [
         'test/**', // tape, common npm pattern
         'tests/**', // also common npm pattern
@@ -31,8 +32,7 @@ module.exports = {
         '**/.eslintrc.js', // eslint config
         '**/*.stories.{​​​​​​​js,jsx}​​​​​​​', // storybook files
       ],
-      optionalDependencies: false,
-      }​​​​​​​
+      }
     ],
 
     // Allow to not use 'this' in a class with a warning because of not so wide brwoser supprort
