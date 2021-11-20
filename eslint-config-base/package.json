@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "Royyan Bachtiar <royyan@kargo.tech>",
   "license": "MIT",
+  "engines": {
+    "node": ">= 6"
+  },
   "dependencies": {
     "eslint-config-airbnb-base": "^14.2.1"
   },
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/kargotech/web-project-configs#readme",
   "repository": {
+    "directory": "eslint-config-base",
     "type": "git",
     "url": "git+https://github.com/kargotech/web-project-configs.git"
   },
