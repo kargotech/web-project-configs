@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.0] - 2020-11-20
+
+💡 Refactor code and add more rules.
+
 ## [0.1.3] - 2020-12-18
 
 💡 Treat test files as jest environment.

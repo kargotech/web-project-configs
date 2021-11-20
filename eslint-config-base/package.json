@@ -1,6 +1,6 @@
 {
   "name": "@kargotech/eslint-config-base",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Sensible eslint configs for kargo.tech project development",
   "main": "index.js",
   "scripts": {
