@@ -1,3 +1,5 @@
+const { testFiles } = require('../file-glob-group');
+
 // Overriding rules from https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/imports.js
 // with additional rules (if any).
 
