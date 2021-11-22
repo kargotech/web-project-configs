@@ -38,6 +38,6 @@ Add this config to your eslint config:
 
 ```json
 {
-  "extends": "@kargotech/eslint-config-typescript-base
+  "extends": "@kargotech/eslint-config-typescript-base"
 }
 ```
