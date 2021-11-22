@@ -8,6 +8,7 @@ module.exports = {
     ...([
       './rules/best-practices',
       './rules/imports',
+      './rules/style',
     ].map(require.resolve))
   ],
   overrides: [

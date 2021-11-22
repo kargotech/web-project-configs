@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.1] - 2020-11-22
+
+🔧 Add missing style rules.
+
 ## [0.2.0] - 2020-11-20
 
 💡 Refactor code and add more rules.
