@@ -1,0 +1,32 @@
+{
+  "name": "@kargotech/eslint-config-typescript-base",
+  "version": "0.1.0",
+  "description": "Sensible eslint configs using typescript for kargo.tech project development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Royyan Bachtiar <royyan@kargo.tech>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6"
+  },
+  "homepage": "https://github.com/kargotech/web-project-configs#readme",
+  "repository": {
+    "directory": "eslint-config-typescript-base",
+    "type": "git",
+    "url": "git+https://github.com/kargotech/web-project-configs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kargotech/web-project-configs/issues"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@kargotech/eslint-config-base": "^0.2.1"
+  }
+}
