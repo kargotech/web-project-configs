@@ -1,12 +1,16 @@
 {
-  "name": "@kargotech/eslint-annotator-github",
-  "version": "0.1.0",
-  "description": "Eslint annotator for github action",
+  "name": "@kargotech/eslint-formatter-github-annotator",
+  "version": "1.0.0",
+  "description": "Eslint formatter for github action annotator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "eslint",
+    "eslint-formatter",
+    "eslintformatter"
+  ],
   "author": "Royyan Bachtiar <royyan@kargo.tech>",
   "license": "MIT",
   "peerDependencies": {
@@ -14,7 +18,7 @@
   },
   "homepage": "https://github.com/kargotech/web-project-configs#readme",
   "repository": {
-    "directory": "eslint-annotator-github",
+    "directory": "eslint-formatter-github-annotator",
     "type": "git",
     "url": "git+https://github.com/kargotech/web-project-configs.git"
   },
