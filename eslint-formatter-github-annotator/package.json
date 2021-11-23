@@ -1,6 +1,6 @@
 {
   "name": "@kargotech/eslint-formatter-github-annotator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Eslint formatter for github action annotator",
   "main": "index.js",
   "scripts": {
