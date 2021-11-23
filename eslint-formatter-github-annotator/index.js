@@ -1,4 +1,4 @@
-const stylishFormatter = require('./stylish');
+const compactFormatter = require('./compact');
 
 const PATH_PREFIX = process.env.LINT_DIR || ''; // Useful for monorepo structure
 
@@ -43,7 +43,7 @@ module.exports = function (results) {
   console.log('::endgroup::');
 
   // Keep the default formatter to run after succesfully generate annotation
-  const stylishFormatted = stylishFormatter(formattedResults);
-  console.log(`::set-output name=LINT_ERRORS::${(stylishFormatted)}`);
-  return stylishFormatted;
+  const compactFormatted = compactFormatter(formattedResults);
+  console.log(`::set-output name=LINT_ERRORS::${(compactFormatted)}`);
+  return compactFormatted;
 };
