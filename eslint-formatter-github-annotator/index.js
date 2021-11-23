@@ -44,6 +44,5 @@ module.exports = function (results) {
 
   // Keep the default formatter to run after succesfully generate annotation
   const compactFormatted = compactFormatter(formattedResults);
-  console.log(`::set-output name=LINT_ERRORS::${(compactFormatted)}`);
   return compactFormatted;
 };
