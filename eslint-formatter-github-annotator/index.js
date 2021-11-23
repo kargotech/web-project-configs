@@ -1,4 +1,4 @@
-const stylishFormatter = require('eslint/lib/cli-engine/formatters/stylish');
+const stylishFormatter = require('./stylish');
 
 const PATH_PREFIX = process.env.LINT_DIR || ''; // Useful for monorepo structure
 

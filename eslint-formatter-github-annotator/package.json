@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/kargotech/web-project-configs/issues"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "strip-ansi": "^7.0.1",
+    "text-table": "^0.2.0"
+  }
 }
