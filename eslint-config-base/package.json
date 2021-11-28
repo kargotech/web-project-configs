@@ -13,6 +13,7 @@
     "node": ">= 6"
   },
   "dependencies": {
+    "@kargotech/eslint-plugin-internal": "^0.1.0",
     "eslint-config-airbnb-base": "^14.2.1"
   },
   "peerDependencies": {
@@ -27,6 +28,5 @@
   },
   "bugs": {
     "url": "https://github.com/kargotech/web-project-configs/issues"
-  },
-  "devDependencies": {}
+  }
 }

@@ -11,6 +11,7 @@ module.exports = {
       './rules/style',
     ].map(require.resolve))
   ],
+  plugins: ['@kargotech/internal'],
   overrides: [
     {
       files: testFiles,

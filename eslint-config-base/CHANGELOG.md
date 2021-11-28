@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.2] - 2020-11-29
+
+🔧 Fix unknown value: 'never'
+💡 Added new rule from kargo internal eslint plugin
+
 ## [0.2.1] - 2020-11-22
 
 🔧 Add missing style rules.
