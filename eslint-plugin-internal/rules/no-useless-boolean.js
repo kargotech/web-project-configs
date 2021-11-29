@@ -33,6 +33,8 @@ module.exports = {
     },
   },
   create(context) {
+    const sourceCode = context.getSourceCode();
+
     return {
       ConditionalExpression(node) {
         // true ? <consequent> : <alternate>
@@ -218,6 +220,8 @@ module.exports = {
           // <true|false> || <other-logical-expression>
           || (helper.isLiteral(node.left.type) && helper.isBoolean(node.left.value) && helper.isOr(node.operator))
         ) {
+          const tokenBeforeRighthand = sourceCode.getTokenBefore(node.right);
+          const hasPreceedingParen = tokenBeforeRighthand.value === '(';
           context.report({
             node,
             messageId: 'default',
@@ -226,7 +230,10 @@ module.exports = {
               start: node.left.loc.start,
             },
             fix(fixer) {
-              return fixer.removeRange([node.left.range[0], node.right.range[0]]);
+              return fixer.removeRange([
+                node.left.range[0],
+                hasPreceedingParen ? tokenBeforeRighthand.range[0] : node.right.range[0],
+              ]);
             },
           });
         }

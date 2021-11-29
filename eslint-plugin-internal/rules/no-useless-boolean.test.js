@@ -88,6 +88,15 @@ tester.run('no-useless-boolean', noUselessBoolean, {
       }],
     },
 
+    // Assign a variable using logical expression with useless `true` on lefthand and punctuator
+    {
+      code: `const x = true && ( 1 + 2 );`,
+      output: `const x = ( 1 + 2 );`,
+      errors: [{
+        message: DEFAULT_ERROR_MESSAGE
+      }],
+    },
+
     // Assign a variable using logical expression with useless `true` on righthand
     {
       code: `const x = foo && bar.baz && true;`,
