@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.2.2] - 2020-11-29
+## [0.3.1] - 2020-11-29
+
+🔧 Bump new fix from kargo internal eslint plugin
+
+## [0.3.0] - 2020-11-29
 
 🔧 Fix unknown value: 'never'
 💡 Added new rule from kargo internal eslint plugin

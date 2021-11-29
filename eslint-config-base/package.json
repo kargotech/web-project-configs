@@ -1,6 +1,6 @@
 {
   "name": "@kargotech/eslint-config-base",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Sensible eslint configs for kargo.tech project development",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "node": ">= 6"
   },
   "dependencies": {
-    "@kargotech/eslint-plugin-internal": "^0.1.0",
+    "@kargotech/eslint-plugin-internal": "^0.1.1",
     "eslint-config-airbnb-base": "^14.2.1"
   },
   "peerDependencies": {
