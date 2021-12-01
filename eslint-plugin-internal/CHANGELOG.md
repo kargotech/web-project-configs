@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.3.2] - 2021-12-02
+
+🔧 Fix added condition for boolean value (false equal with false or not true).
+
 ## [0.3.1] - 2021-12-01
 
 💡 Move eslint composer to dependencies

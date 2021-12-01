@@ -39,6 +39,11 @@ tester.run('no-useless-boolean', noUselessBoolean, {
       errors: [{ message: DEFAULT_ERROR_MESSAGE }],
     },
     {
+      code: `function test() { return !false && 1; }`,
+      output: `function test() { return 1; }`,
+      errors: [{ message: DEFAULT_ERROR_MESSAGE }],
+    },
+    {
       code: `
         function test() {
           return true
@@ -54,6 +59,11 @@ tester.run('no-useless-boolean', noUselessBoolean, {
     // Function that returns logical expression with useless `true` on righthand
     {
       code: `function test() { return foo && bar && true; }`,
+      output: `function test() { return foo && bar; }`,
+      errors: [{ message: DEFAULT_ERROR_MESSAGE }],
+    },
+    {
+      code: `function test() { return foo && bar && !false; }`,
       output: `function test() { return foo && bar; }`,
       errors: [{ message: DEFAULT_ERROR_MESSAGE }],
     },
@@ -78,6 +88,11 @@ tester.run('no-useless-boolean', noUselessBoolean, {
       output: `function test() { return foo; }`,
       errors: [{ message: DEFAULT_ERROR_MESSAGE }],
     },
+    {
+      code: `function test() { return !true || foo; }`,
+      output: `function test() { return foo; }`,
+      errors: [{ message: DEFAULT_ERROR_MESSAGE }],
+    },
 
     // Assign a variable using logical expression with useless `true` on lefthand
     {
@@ -87,10 +102,24 @@ tester.run('no-useless-boolean', noUselessBoolean, {
         message: DEFAULT_ERROR_MESSAGE
       }],
     },
+    {
+      code: `const x = !false && undefined;`,
+      output: `const x = undefined;`,
+      errors: [{
+        message: DEFAULT_ERROR_MESSAGE
+      }],
+    },
 
     // Assign a variable using logical expression with useless `true` on lefthand and punctuator
     {
       code: `const x = true && ( 1 + 2 );`,
+      output: `const x = ( 1 + 2 );`,
+      errors: [{
+        message: DEFAULT_ERROR_MESSAGE
+      }],
+    },
+    {
+      code: `const x = !false && ( 1 + 2 );`,
       output: `const x = ( 1 + 2 );`,
       errors: [{
         message: DEFAULT_ERROR_MESSAGE
@@ -114,6 +143,13 @@ tester.run('no-useless-boolean', noUselessBoolean, {
         message: DEFAULT_ERROR_MESSAGE
       }],
     },
+    {
+      code: `const x = foo || !false || bar.baz;`,
+      output: `const x = foo || bar.baz;`,
+      errors: [{
+        message: DEFAULT_ERROR_MESSAGE
+      }],
+    },
 
     // if (false) { <useless-code> } ...
     {
@@ -132,6 +168,13 @@ tester.run('no-useless-boolean', noUselessBoolean, {
         message: DEFAULT_ERROR_MESSAGE
       }],
     },
+    {
+      code: `if (!false) { console.log('executed'); } console.log('also executed');`,
+      output: `console.log('executed'); console.log('also executed');`,
+      errors: [{
+        message: DEFAULT_ERROR_MESSAGE
+      }],
+    },
 
     // if (false) { <useless-code> } else { ... }
     {
@@ -145,6 +188,13 @@ tester.run('no-useless-boolean', noUselessBoolean, {
     // if (true) { ... } else { <useless-code> }
     {
       code: `if (true) { console.log('executed'); } else { console.log('not executed'); }`,
+      output: `console.log('executed');`,
+      errors: [{
+        message: DEFAULT_ERROR_MESSAGE
+      }],
+    },
+    {
+      code: `if (!false) { console.log('executed'); } else { console.log('not executed'); }`,
       output: `console.log('executed');`,
       errors: [{
         message: DEFAULT_ERROR_MESSAGE

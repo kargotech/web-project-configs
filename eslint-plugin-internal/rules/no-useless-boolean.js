@@ -5,17 +5,26 @@ const helper = {
   isIfStatement(params) {
     return params === 'IfStatement';
   },
-  isLiteral(params) {
-    return params === 'Literal';
+  isLiteral(node) {
+    return node.type === 'Literal';
   },
-  isTrue(params) {
-    return params === true;
+  isNegatedPrefix(node) {
+    return node.type === 'UnaryExpression' && node.prefix === true && node.operator === '!';
   },
-  isFalse(params) {
-    return params === false;
+  isTrue(node) {
+    return (this.isLiteral(node) && node.value === true) || this.isNotFalse(node);
   },
-  isBoolean(params) {
-    return this.isFalse(params) || this.isTrue(params);
+  isNotTrue(node) {
+    return this.isNegatedPrefix(node) && this.isTrue(node.argument);
+  },
+  isFalse(node) {
+    return (this.isLiteral(node) && node.value === false) || this.isNotTrue(node);
+  },
+  isNotFalse(node) {
+    return this.isNegatedPrefix(node) && this.isFalse(node.argument);
+  },
+  isBoolean(node) {
+    return this.isFalse(node) || this.isTrue(node);
   },
   isOr(params) {
     return params === '||';
@@ -38,7 +47,7 @@ module.exports = {
     return {
       ConditionalExpression(node) {
         // true ? <consequent> : <alternate>
-        if (helper.isLiteral(node.test.type) && helper.isTrue(node.test.value)) {
+        if (helper.isTrue(node.test)) {
           context.report({
             node,
             messageId: 'default',
@@ -58,7 +67,7 @@ module.exports = {
         }
 
         // false ? <consequent> : <alternate>
-        if (helper.isLiteral(node.test.type) && helper.isFalse(node.test.value)) {
+        if (helper.isFalse(node.test)) {
           context.report({
             node,
             messageId: 'default',
@@ -73,7 +82,7 @@ module.exports = {
       },
       IfStatement(node) {
         // if (false) { <consequent> } <alternate>
-        if (helper.isLiteral(node.test.type) && helper.isFalse(node.test.value)) {
+        if (helper.isFalse(node.test)) {
           context.report({
             node,
             messageId: 'default',
@@ -145,7 +154,7 @@ module.exports = {
         }
 
         // if (true) { <consequent> } <alternate>
-        if (helper.isLiteral(node.test.type) && helper.isTrue(node.test.value)) {
+        if (helper.isTrue(node.test)) {
           context.report({
             node,
             messageId: 'default',
@@ -216,9 +225,9 @@ module.exports = {
       LogicalExpression(node) {
         if (
           // true && <other-logical-expression>
-          (helper.isLiteral(node.left.type) && helper.isTrue(node.left.value) && helper.isAnd(node.operator))
+          (helper.isTrue(node.left) && helper.isAnd(node.operator))
           // <true|false> || <other-logical-expression>
-          || (helper.isLiteral(node.left.type) && helper.isBoolean(node.left.value) && helper.isOr(node.operator))
+          || (helper.isBoolean(node.left) && helper.isOr(node.operator))
         ) {
           const tokenBeforeRighthand = sourceCode.getTokenBefore(node.right);
           const hasPreceedingParen = tokenBeforeRighthand.value === '(';
@@ -240,9 +249,9 @@ module.exports = {
 
         if (
           // <other-logical-expression> && true
-          (helper.isLiteral(node.right.type) && helper.isTrue(node.right.value) && helper.isAnd(node.operator))
+          (helper.isTrue(node.right) && helper.isAnd(node.operator))
           // <other-logical-expression> || <true|false>
-          || (helper.isLiteral(node.right.type) && helper.isBoolean(node.right.value) && helper.isOr(node.operator))
+          || (helper.isBoolean(node.right) && helper.isOr(node.operator))
         ) {
           context.report({
             node,
