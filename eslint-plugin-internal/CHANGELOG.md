@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.2.0] - 2021-12-01
+## [0.3.1] - 2021-12-01
+
+💡 Move eslint composer to dependencies
+
+## [0.3.0] - 2021-12-01
 
 💡 Added 2nd layer fix for unused vars. Overriding fix from `eslint-plugin-autofix`
 

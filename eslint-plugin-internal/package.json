@@ -1,6 +1,6 @@
 {
   "name": "@kargotech/eslint-plugin-internal",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Eslint plugin with custom rules for internal use",
   "main": "index.js",
   "scripts": {
@@ -18,11 +18,13 @@
   "bugs": {
     "url": "https://github.com/kargotech/web-project-configs/issues"
   },
+  "dependencies": {
+    "eslint-rule-composer": "^0.3.0"
+  },
   "peerDependencies": {
     "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0",
-    "eslint-rule-composer": "^0.3.0"
+    "eslint": "^5.16.0 || ^6.8.0 || ^7.2.0"
   }
 }
