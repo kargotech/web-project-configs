@@ -1,6 +1,6 @@
 {
   "name": "@kargotech/eslint-plugin-internal",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Eslint plugin with custom rules for internal use",
   "main": "index.js",
   "scripts": {

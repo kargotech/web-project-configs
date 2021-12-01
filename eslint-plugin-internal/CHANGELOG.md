@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.2.0] - 2021-12-01
+
+💡 Added 2nd layer fix for unused vars. Overriding fix from `eslint-plugin-autofix`
+
 ## [0.2.0] - 2021-11-30
 
 💡 Added autofix for unreachable code.
