@@ -1,6 +1,6 @@
 {
   "name": "@kargotech/eslint-config-typescript-base",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sensible eslint configs using typescript for kargo.tech project development",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,6 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "@kargotech/eslint-config-base": "^0.2.1"
+    "@kargotech/eslint-config-base": "^0.3.1"
   }
 }
