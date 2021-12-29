@@ -12,7 +12,6 @@ module.exports = ruleComposer.mapReports(
   originalNoUnreachableRule,
   (problem, context) => {
     problem.fix = fixer => {
-      console.log(problem.node);
       return fixer.replaceText(problem.node, 'true');
     }
 

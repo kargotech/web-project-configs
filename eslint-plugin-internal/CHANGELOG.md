@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.1] - 2021-12-29
+
+🔧 Remove debug code from `no-undef-fix` rule.
+
 ## [0.4.0] - 2021-12-29
 
 💡 Added autofix for `no-undef` rule. This is a companion for `no-unreachable-fix` rule.
