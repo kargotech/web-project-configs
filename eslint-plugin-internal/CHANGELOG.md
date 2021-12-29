@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.0] - 2021-12-29
+
+💡 Added autofix for `no-undef` rule. This is a companion for `no-unreachable-fix` rule.
+
 ## [0.3.2] - 2021-12-02
 
 🔧 Fix added condition for boolean value (false equal with false or not true).

@@ -1,7 +1,8 @@
+// This rule is best combined with the `no-unused-vars` rule.
 const ruleComposer = require('eslint-rule-composer');
 const eslint = require('eslint');
 
-const originalNoUnreachableRule = new eslint.Linter().getRules().get('no-unreachable');
+const originalNoUnreachableRule = new eslint.Linter().getRules().get('no-undef');
 originalNoUnreachableRule.meta.fixable = true;
 originalNoUnreachableRule.meta.messages = {
   ...(originalNoUnreachableRule.meta.messages || {}),
@@ -12,7 +13,7 @@ module.exports = ruleComposer.mapReports(
   (problem, context) => {
     problem.fix = fixer => {
       console.log(problem.node);
-      return fixer.remove(problem.node);
+      return fixer.replaceText(problem.node, 'true');
     }
 
     return problem;
