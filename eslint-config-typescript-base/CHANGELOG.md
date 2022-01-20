@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.3] - 2022-01-20
+
+🔧 Fix conflicting dot-notation rules.
+
 ## [0.1.2] - 2022-01-20
 
 🔧 Added config and rule to match the base config
