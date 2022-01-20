@@ -15,6 +15,10 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    ...([
+      './rules/imports',
+      './rules/style',
+    ].map(require.resolve))
   ],
   rules: {
     ...(intersectKeys.reduce((acc, val) => ({
