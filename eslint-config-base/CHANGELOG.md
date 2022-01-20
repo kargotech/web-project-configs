@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.4.0] - 2022-01-22
+
+💡 Added `import/extensions` rule
+
 ## [0.3.1] - 2020-11-29
 
 🔧 Bump new fix from kargo internal eslint plugin

@@ -63,5 +63,13 @@ module.exports = {
         tuples: baseStyleRules['comma-dangle'][1].arrays,
       },
     ],
+
+    'dot-notation': 'off',
+    '@typescript-eslint/dot-notation': [
+      'error',
+      {
+        allowKeywords: true
+      }
+    ],
   }
 };
