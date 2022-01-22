@@ -1,6 +1,10 @@
 # Changelog
 
-## [0.4.0] - 2022-01-22
+## [0.4.1] - 2022-01-22
+
+🔧 Remove gql and graphql allowed extension to comply with tsc compiler
+
+## [0.4.0] - 2022-01-20
 
 💡 Added `import/extensions` rule
 

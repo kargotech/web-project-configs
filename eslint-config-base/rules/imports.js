@@ -20,10 +20,7 @@ module.exports = {
         js: 'never',
         ts: 'never',
         tsx: 'never',
-        json: 'never',
         jsx: 'never',
-        gql: 'never',
-        graphql: 'never',
       },
     ],
 

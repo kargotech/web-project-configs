@@ -1,6 +1,6 @@
 {
   "name": "@kargotech/eslint-config-typescript-base",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Sensible eslint configs using typescript for kargo.tech project development",
   "main": "index.js",
   "scripts": {

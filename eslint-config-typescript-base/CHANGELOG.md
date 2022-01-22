@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.4] - 2022-01-22
+
+🔧 Remove gql and graphql allowed extension to comply with tsc compiler
+
 ## [0.1.3] - 2022-01-20
 
 🔧 Fix conflicting dot-notation rules.
